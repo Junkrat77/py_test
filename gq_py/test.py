@@ -1,2 +1,2 @@
 def hello():
-    print("hello ganquan!")
+    print("hello ganquanv0.2!")
