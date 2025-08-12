@@ -28,9 +28,9 @@ jobs:
         shell: bash
         run: |
           TAG="${{ github.event.release.tag_name }}"
-          if [[ "$TAG" == python1 ]]; then
+          if [[ "$TAG" == python1-* ]]; then
             echo "src_dir=gq_py/gq-python1" >> $GITHUB_OUTPUT
-          elif [[ "$TAG" == python2 ]]; then
+          elif [[ "$TAG" == python2-* ]]; then
             echo "src_dir=gq_py/gq-python2" >> $GITHUB_OUTPUT
           else
             echo "Unsupported tag: $TAG" >&2
