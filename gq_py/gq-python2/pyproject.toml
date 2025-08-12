@@ -16,7 +16,7 @@ dependencies = [
 ]
 
 [project.scripts]
-gq-python1 = "src.server:main"
+gq-python2 = "src.server:main"
 
 
 
