@@ -13,7 +13,7 @@ keywords = [
 requires-python = ">=3.10"
 dependencies = [
 ]
-
+readme = "README.md"
 [project.scripts]
 gq-python1 = "src.server:main"
 
