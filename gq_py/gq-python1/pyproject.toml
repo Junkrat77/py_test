@@ -1,7 +1,7 @@
 [project]
 name = "gq-python1"
-version = "0.0.2"
-license = { file = "LICENSE" }
+version = "0.0.3"
+license = { file = "../../LICENSE" }
 classifiers = [
     'Development Status :: 3 - Alpha',
     "Programming Language :: Python :: 3",
