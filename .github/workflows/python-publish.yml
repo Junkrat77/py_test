@@ -29,10 +29,10 @@ jobs:
         run: |
           TAG="${{ github.event.release.tag_name }}"
           case "$TAG" in
-            gq-python1-*)
+            python1-*)
               echo "src_dir=gq_py/gq-python1" >> "$GITHUB_OUTPUT"
               ;;
-            gq-python2-*)
+            python2-*)
               echo "src_dir=gq_py/gq-python2" >> "$GITHUB_OUTPUT"
               ;;
             # add more packages here
