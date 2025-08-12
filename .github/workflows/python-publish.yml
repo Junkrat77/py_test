@@ -28,14 +28,19 @@ jobs:
         shell: bash
         run: |
           TAG="${{ github.event.release.tag_name }}"
-          if [[ "$TAG" == python1-* ]]; then
-            echo "src_dir=gq_py/gq-python1" >> $GITHUB_OUTPUT
-          elif [[ "$TAG" == python2-* ]]; then
-            echo "src_dir=gq_py/gq-python2" >> $GITHUB_OUTPUT
-          else
-            echo "Unsupported tag: $TAG" >&2
-            exit 1
-          fi
+          case "$TAG" in
+            gq-python1-*)
+              echo "src_dir=gq_py/gq-python1" >> "$GITHUB_OUTPUT"
+              ;;
+            gq-python2-*)
+              echo "src_dir=gq_py/gq-python2" >> "$GITHUB_OUTPUT"
+              ;;
+            # add more packages here
+            *)
+              echo "Unsupported tag: $TAG" >&2
+              exit 1
+              ;;
+          esac
 
       - name: Build selected package
         run: |
